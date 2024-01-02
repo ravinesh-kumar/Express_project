@@ -1,0 +1,75 @@
+{{>header}}
+<title>Energym | Contact</title>
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    {{>navbar}}
+  </div>
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          <span>
+            Get In Touch
+          </span>
+        </h2>
+      </div>
+      <div class="layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6 ">
+            {{!-- to display message 
+            get me show false krna hai aur post me show true
+             --}}
+            {{#if show}}
+              <p class="text-success">Thanks to Share Your Query With Us!!! Our Team Will Contact You Soon</p>
+            {{/if}}
+            {{!-- get se call kra hai joo index.js me hai --}}
+            <form action="/contact" method="post">
+              <div class="contact_form-container">
+                <div>
+                  <div>
+                    <input type="text" name="name" required placeholder="Name" />
+                  </div>
+                  <div>
+                    <input type="email" name="email" required placeholder="Email" />
+                  </div>
+                  <div>
+                    <input type="text" name="phone" required placeholder="Phone Number" />
+                  </div>
+                  <div>
+                    <input type="text" name="subject" required placeholder="Subject" />
+                  </div>
+                  <div class="mt-5">
+                    <input type="text" name="message" required placeholder="Message" />
+                  </div>
+                  <div class="mt-5">
+                    <button type="submit">
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="map_container">
+              <div class="map-responsive">
+                <div class="mapouter">
+                  <div class="gmap_canvas"><iframe width="100%" height="400px" id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=a-43%20sector%2016%20noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                      frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+
+  {{>footer}}
